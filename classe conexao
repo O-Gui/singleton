@@ -1,0 +1,28 @@
+package br.com.conexao;
+
+public class Conexao {
+	//atributo statico n precisa ser instanciado
+	private static Conexao conexao;
+
+	private Conexao() {
+		
+		System.out.println("banco conectado");
+	}
+	
+	public static Conexao getInstance() {
+		
+		if (conexao == null) {
+			
+			conexao = new Conexao();
+		}
+		return conexao;
+	}
+	
+	public void acao() {
+		
+		System.out.println("fazendo consulta"
+				+ "");
+		}
+	
+	
+}
